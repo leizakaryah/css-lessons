@@ -1,0 +1,67 @@
+<!DOCUMENT>
+<html lang = "en" dir = "ltr">
+    <head>
+        <meta charset="utf-8">
+        <title> CSS Media Queries </title>
+        
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        
+        <style>
+        
+        /* APPLIES TO ANYTHING UNLESS OVERRIDEN ELSEWHERE */
+            
+            *  { margin: 0; }
+            
+            body {background: rgba(225,0,0,.25);}
+            
+            header {background: rgba(225,0,0,.25); margin-bottom: 10px;height: 50px;}
+            
+            section {background: rgba(225,0,0,.25); margin-bottom: 10px;height: 1000px;}
+            
+            aside {background: rgba(225,0,0,.25); margin-bottom: 10px;height: 1000px;display: none;}
+            
+            footer {background: rgba(225,0,0,.25);height: 50px;}
+            
+            
+        /* APPLIES TO ANY DEVICE WHOSE SCREEN WIDTH IS 768PX OR WIDER*/
+            
+            @media screen and (min-width:768px) {
+                
+            body {background: rgba(0,225,0,.25);}
+                
+            aside {display: block;}
+                
+            }
+            
+        /* APPLIES TO ANY DEVICE WHOSE SCREEN WIDTH IS 1200PX OR WIDER*/
+            
+             @media screen and (min-width:1200px) {
+                
+            body {background: rgba(0,0,225,.25);}
+                 
+            section { float: left; width: 69%; margin-right: 10px}
+                 
+            aside {float: right; width: 30%;}
+                 
+            footer {clear: both;}
+                 
+            }
+            
+            
+        </style>
+        
+        
+    </head>
+    <body>
+        
+        <header>Header</header>
+        <section>Section</section>
+        <aside>Aside</aside>
+        <footer>Footer</footer>
+        
+        
+    </body>
+
+
+
+</html>
